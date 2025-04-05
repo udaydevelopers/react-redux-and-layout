@@ -17,6 +17,7 @@ import Faqs from "./pages/Faqs";
 import Features from "./pages/Features";
 import PrivateRoute from "./components/PrivateRoute";
 import './App.css';
+import Users from "./pages/Users";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -46,6 +47,14 @@ function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="features" element={<Features />} />
           <Route path="faqs" element={<Faqs />} />
+          <Route
+            path="users"
+            element={
+              <PrivateRoute auth={isAuthenticated}>
+                <Users />
+              </PrivateRoute>
+            }
+          />
         </Route>
 
         <Route path="*" element={<NotFound />} />
