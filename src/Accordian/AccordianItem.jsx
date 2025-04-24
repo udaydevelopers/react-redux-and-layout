@@ -1,4 +1,5 @@
-const AccordionItem = ({ title, content, isOpen, onClick }) => (
+import React, {memo} from "react";
+const AccordionItem = memo(({ title, content, isOpen, onClick }) => (
     <div className="border-b">
       <button
         onClick={onClick}
@@ -9,6 +10,6 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => (
       </button>
       {isOpen && <div className="p-4 pt-0 text-gray-700">{content}</div>}
     </div>
-  );
+  ));
 
   export default AccordionItem;
