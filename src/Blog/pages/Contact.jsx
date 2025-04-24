@@ -8,7 +8,7 @@ const Contact = () => {
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><a href="#"><i className="bi bi-house"></i> Contact</a></li>
           <li className="breadcrumb-item"><a href="#">Category</a></li>
-          <li className="breadcrumb-item active current">Starter Page</li>
+          <li className="breadcrumb-item active current">Contact</li>
         </ol>
       </nav>
     </div>

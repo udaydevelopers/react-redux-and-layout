@@ -8,7 +8,7 @@ const About = () => {
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><a href="#"><i className="bi bi-house"></i> About</a></li>
           <li className="breadcrumb-item"><a href="#">Category</a></li>
-          <li className="breadcrumb-item active current">Starter Page</li>
+          <li className="breadcrumb-item active current">About</li>
         </ol>
       </nav>
     </div>
