@@ -68,6 +68,7 @@ const App = () => {
             resetTimer();
             alert('Timer finished!')
             setIsStart(false)
+            clearInterval(tid);
         }
     }
 
