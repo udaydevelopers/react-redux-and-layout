@@ -45,7 +45,13 @@ const TypeaheadSearch = () => {
       setLoading(false);
     }
   };
-
+  const highlightMatch = (text) => {
+    if (!query) return text;
+    const regex = new RegExp(`(${query})`, "gi");
+    const highlighted = text.replace(regex, "<mark>$1</mark>");
+    return { __html: highlighted };
+  };
+  
   // Debounced search function
   // Debounce with useCallback to persist the function across renders
   const debouncedSearch = useCallback(
